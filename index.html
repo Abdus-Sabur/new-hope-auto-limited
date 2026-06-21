@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Hope Auto Limited | Premium New &amp; Used Cars in Nigeria</title>
+<meta name="description" content="New Hope Auto Limited sells new and fairly-used vehicles in Nigeria with full transparency. Browse our gallery, check new arrivals, or start your purchase journey today.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23c9a84c'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#c9a84c;--gl:#e8c76b;--d:#0a0a0a;--d2:#111;--mt:#888;--cb:#1a1a1a}
+*{box-sizing:border-box}
+html,body{margin:0;background:#0a0a0a}
+.nha{font-family:Inter,Arial,sans-serif;background:#0a0a0a;color:#f0f0f0;max-width:1200px;margin:0 auto}
+.nha h1,.nha h2,.nha h3{font-family:Poppins,sans-serif;margin:0 0 10px}
+.nha .pg{display:none;padding:24px}
+.nha .pg.active{display:block}
+.nha header{position:sticky;top:0;background:#0a0a0a;z-index:10}
+.nha .nb{cursor:pointer;padding:8px 14px;border-radius:6px;font-size:13px;color:#888;font-weight:500}
+.nha .nb:hover,.nha .nb.active{color:#c9a84c;background:rgba(201,168,76,.08)}
+.nha .btn{display:inline-block;padding:11px 22px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #c9a84c;margin-right:8px}
+.nha .btn-g{background:#c9a84c;color:#0a0a0a}
+.nha .btn-o{background:transparent;color:#c9a84c}
+.nha .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.nha .card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;overflow:hidden}
+.nha .card:hover{border-color:#c9a84c}
+.nha .cb{padding:14px}
+.nha .ftab{padding:7px 16px;border:1px solid #333;border-radius:20px;font-size:12px;cursor:pointer;color:#888;display:inline-block;margin:0 6px 6px 0}
+.nha .ftab.active{background:#c9a84c;color:#0a0a0a;border-color:#c9a84c}
+.nha input,.nha select,.nha textarea{width:100%;padding:10px;background:#111;border:1px solid #333;border-radius:6px;color:#f0f0f0;font-size:13px;margin-bottom:12px;font-family:Inter,sans-serif}
+.nha label{display:block;font-size:12px;color:#888;margin-bottom:5px}
+.nha .etab{padding:9px 16px;border-bottom:2px solid transparent;cursor:pointer;font-size:13px;color:#888;display:inline-block}
+.nha .etab.active{color:#c9a84c;border-color:#c9a84c}
+.nha .eqp{display:none}
+.nha .eqp.active{display:block}
+.nha .stepnav{display:flex;justify-content:space-between;margin-bottom:20px}
+.nha .stepc{width:30px;height:30px;border-radius:50%;background:#1a1a1a;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:12px;color:#888;margin:0 auto 6px}
+.nha .stepc.on{background:#c9a84c;color:#0a0a0a;border-color:#c9a84c}
+.nha .pill{font-size:10px;padding:3px 9px;border-radius:10px;background:rgba(201,168,76,.15);color:#e8c76b;font-weight:600}
+.nha button.btn{font-family:inherit}
+.nha .hp{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<div class="nha">
+<header style="display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid #222;flex-wrap:wrap;gap:12px">
+<div><div style="font-size:18px;font-weight:800;color:#c9a84c;letter-spacing:.5px">NEW HOPE AUTO LIMITED</div><div style="font-size:10px;color:#888;letter-spacing:1px">PREMIUM VEHICLES &middot; TRUSTED SINCE DAY ONE</div></div>
+<nav style="display:flex;gap:4px;flex-wrap:wrap">
+<span class="nb active" id="nav-home" onclick="go('home')">Home</span>
+<span class="nb" id="nav-arrivals" onclick="go('arrivals')">New Arrivals</span>
+<span class="nb" id="nav-gallery" onclick="go('gallery')">Gallery</span>
+<span class="nb" id="nav-buy" onclick="go('buy')">Buy a Car</span>
+<span class="nb" id="nav-enquiries" onclick="go('enquiries')">Enquiries &amp; Feedback</span>
+</nav></header>
+
+<main>
+<section class="pg active" id="page-home">
+<h1 style="font-size:26px;color:#fff">Drive home <span style="color:#c9a84c">excellence</span>.</h1>
+<p style="color:#aaa;font-size:13px;max-width:520px;margin-bottom:16px">New and fairly-used vehicles, hand-inspected and sold with full transparency. From the showroom floor to your driveway.</p>
+<span class="btn btn-g" onclick="go('gallery')">Browse Gallery</span><span class="btn btn-o" onclick="go('buy')">Buy a Car</span>
+<div id="showroom-host" style="margin-top:22px;border-radius:10px;overflow:hidden"></div>
+<h2 style="font-size:18px;margin-top:28px">Featured Vehicles</h2>
+<div class="grid" id="featured-grid"></div>
+
+<div style="margin-top:36px;background:#111;border:1px solid #222;border-radius:10px;padding:22px;display:flex;gap:20px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;min-width:110px">
+<div style="width:90px;height:90px;border-radius:50%;border:2px solid #c9a84c;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#c9a84c;font-family:Poppins">AAF</div>
+<svg viewBox="0 0 110 110" style="width:80px;height:80px">
+<circle cx="55" cy="55" r="48" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+<circle cx="55" cy="55" r="40" fill="none" stroke="#c9a84c" stroke-width="1"/>
+<polygon points="55,18 62,44 88,44 67,59 74,85 55,69 36,85 43,59 22,44 48,44" fill="none" stroke="#c9a84c" stroke-width="1.2"/>
+<text x="55" y="9" text-anchor="middle" fill="#c9a84c" font-size="6">NEW HOPE AUTO LIMITED</text>
+<text x="55" y="106" text-anchor="middle" fill="#c9a84c" font-size="5">INTEGRITY &middot; QUALITY &middot; EXCELLENCE</text>
+</svg>
+</div>
+<div style="flex:1;min-width:260px">
+<h2 style="font-size:17px;color:#fff">A Message from Our Chairman</h2>
+<p style="color:#bbb;font-size:13px;line-height:1.6;margin-bottom:10px">To every prospective customer walking through our doors or browsing this page &mdash; welcome. New Hope Auto Limited was built on one promise: that every Nigerian deserves a fair, transparent path to owning a quality vehicle. Every car on this floor has been personally vetted, and every transaction here is built on trust. We look forward to earning yours.</p>
+<p style="font-style:italic;color:#c9a84c;font-size:13px">&mdash; A.A. Fasasi, Chairman</p>
+<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+<span class="pill">Transparent Transactions</span><span class="pill">Value for Money</span><span class="pill">Customer-First Priority</span>
+</div>
+</div></div>
+</section>
+
+<section class="pg" id="page-arrivals">
+<h2 style="font-size:20px">New Arrivals</h2>
+<div><span class="ftab active" onclick="renderArrivals('all',this)">All</span><span class="ftab" onclick="renderArrivals('new',this)">Brand New</span><span class="ftab" onclick="renderArrivals('used',this)">Fairly Used</span></div>
+<div class="grid" id="arrivals-grid"></div>
+</section>
+
+<section class="pg" id="page-gallery">
+<h2 style="font-size:20px">Vehicle Gallery</h2>
+<div><span class="ftab active" onclick="renderGallery('All',this)">All</span><span class="ftab" onclick="renderGallery('SUV',this)">SUV</span><span class="ftab" onclick="renderGallery('Sedan',this)">Sedan</span><span class="ftab" onclick="renderGallery('Luxury Sedan',this)">Luxury Sedan</span><span class="ftab" onclick="renderGallery('Crossover',this)">Crossover</span><span class="ftab" onclick="renderGallery('Pickup',this)">Pickup</span></div>
+<div class="grid" id="gallery-grid"></div>
+</section>
+
+<section class="pg" id="page-buy">
+<h2 style="font-size:20px">Buy a Car &mdash; 5 Simple Steps</h2>
+<div class="stepnav" id="stepnav"></div>
+<div id="stepcontent" style="background:#111;border:1px solid #222;border-radius:10px;padding:20px;min-height:120px"></div>
+<div style="margin-top:16px"><span class="btn btn-o" onclick="moveStep(-1)">Back</span><span class="btn btn-g" onclick="moveStep(1)">Next</span></div>
+</section>
+
+<section class="pg" id="page-enquiries">
+<h2 style="font-size:20px">Enquiries &amp; Feedback</h2>
+<div style="border-bottom:1px solid #222;margin-bottom:16px">
+<span class="etab active" onclick="eTab('enq',this)">Vehicle Enquiry</span><span class="etab" onclick="eTab('fb',this)">Feedback</span><span class="etab" onclick="eTab('visit',this)">Book a Visit</span>
+</div>
+
+<div class="eqp active" id="eq-enq">
+<form name="vehicle-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event,'enq-msg')">
+<input type="hidden" name="form-name" value="vehicle-enquiry">
+<p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+<label>Full Name</label><input name="name" required placeholder="Your name">
+<label>Phone Number</label><input name="phone" required placeholder="080...">
+<label>Vehicle of Interest</label><select name="vehicle" id="enq-vehicle"></select>
+<label>Message</label><textarea name="message" rows="3" placeholder="Tell us what you'd like to know"></textarea>
+<button type="submit" class="btn btn-g">Send Enquiry</button>
+<div id="enq-msg" style="margin-top:10px;font-size:12px;color:#8fd19e"></div>
+</form>
+</div>
+
+<div class="eqp" id="eq-fb">
+<form name="feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event,'fb-msg')">
+<input type="hidden" name="form-name" value="feedback">
+<p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+<label>Full Name</label><input name="name" required placeholder="Your name">
+<label>Rate Your Experience</label><select name="rating"><option>Excellent</option><option>Good</option><option>Average</option><option>Poor</option></select>
+<label>Feedback</label><textarea name="message" rows="3" placeholder="Share your experience with us"></textarea>
+<button type="submit" class="btn btn-g">Submit Feedback</button>
+<div id="fb-msg" style="margin-top:10px;font-size:12px;color:#8fd19e"></div>
+</form>
+</div>
+
+<div class="eqp" id="eq-visit">
+<form name="book-a-visit" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event,'visit-msg')">
+<input type="hidden" name="form-name" value="book-a-visit">
+<p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+<label>Full Name</label><input name="name" required placeholder="Your name">
+<label>Preferred Date</label><input name="date" type="date" required>
+<label>Phone Number</label><input name="phone" required placeholder="080...">
+<button type="submit" class="btn btn-g">Book Visit</button>
+<div id="visit-msg" style="margin-top:10px;font-size:12px;color:#8fd19e"></div>
+</form>
+</div>
+</section>
+</main>
+
+<footer style="padding:20px 24px;border-top:1px solid #222;font-size:11px;color:#888;text-align:center">&copy; 2026 New Hope Auto Limited, Lagos, Nigeria. All rights reserved.</footer>
+</div>
+
+<script>
+var galleryData=[
+{id:'merc-glc',brand:'Mercedes',model:'GLC 300 AMG-Line',year:'2019',price:'₦32,000,000',condition:'used',engine:'2.0L Turbo',power:'258hp',fuel:'Petrol',trans:'Auto 9-spd',seats:5,drive:'4MATIC',tag:'SUV',carColor:'#1a1a1a',carStroke:'#3a3a3a',wColor:'#888',featured:true,frontFn:'glc'},
+{id:'toyota-lc',brand:'Toyota',model:'Land Cruiser GX-R',year:'2021',price:'₦78,000,000',condition:'used',engine:'4.0L V6',power:'271hp',fuel:'Petrol',trans:'Auto 6-spd',seats:7,drive:'4WD',tag:'SUV',carColor:'#111',carStroke:'#333',wColor:'#777',featured:true,frontFn:'lc'},
+{id:'lexus-is',brand:'Lexus',model:'IS 350 F Sport',year:'2020',price:'₦38,000,000',condition:'used',engine:'3.5L V6',power:'311hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'RWD',tag:'Sedan',carColor:'#e8e8e8',carStroke:'#c0c0c0',wColor:'#1a1a1a',featured:true,frontFn:'lexis'},
+{id:'merc-e350',brand:'Mercedes',model:'E350 Exclusive',year:'2020',price:'₦28,000,000',condition:'used',engine:'2.0L EQ Boost',power:'258hp',fuel:'Petrol',trans:'Auto 9-spd',seats:5,drive:'RWD',tag:'Luxury Sedan',carColor:'#1a2a4a',carStroke:'#2a3a5a',wColor:'#888',frontFn:'merce'},
+{id:'toyota-hilux',brand:'Toyota',model:'Hilux 2.8 GD-6 SR',year:'2021',price:'₦22,500,000',condition:'used',engine:'2.8L Diesel',power:'177hp',fuel:'Diesel',trans:'Auto 6-spd',seats:5,drive:'4WD',tag:'Pickup',carColor:'#b0b0b0',carStroke:'#888',wColor:'#333',featured:true,pickup:true},
+{id:'merc-s63',brand:'Mercedes',model:'S63 AMG L',year:'2018',price:'₦52,000,000',condition:'used',engine:'5.5L V8 Biturbo',power:'577hp',fuel:'Petrol',trans:'Speedshift',seats:5,drive:'4MATIC',tag:'Luxury Sedan',carColor:'#111',carStroke:'#3a3a3a',wColor:'#888',featured:true,frontFn:'s63'},
+{id:'toyota-cam',brand:'Toyota',model:'Camry SE 2.5L',year:'2020',price:'₦18,500,000',condition:'used',engine:'2.5L 4-Cyl',power:'203hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Sedan',carColor:'#cc2200',carStroke:'#991a00',wColor:'#1a1a1a'},
+{id:'toyota-camxse',brand:'Toyota',model:'Camry XSE 2.5L',year:'2022',price:'₦24,500,000',condition:'used',engine:'2.5L 4-Cyl',power:'203hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Sedan',carColor:'#f0ede8',carStroke:'#ccc',wColor:'#222',featured:true,frontFn:'camry'},
+{id:'bestune-t77',brand:'Bestune',model:'T77 Pro 1.5T',year:'2024',price:'₦19,800,000',condition:'new',engine:'1.5L Turbo',power:'156hp',fuel:'Petrol',trans:'DCT 7-spd',seats:5,drive:'FWD',tag:'Crossover',carColor:'#f4f4f4',carStroke:'#ddd',wColor:'#222',featured:true},
+{id:'toyota-hyb',brand:'Toyota',model:'Camry 2.5 Hybrid',year:'2023',price:'₦28,500,000',condition:'new',engine:'2.5L Hybrid',power:'218hp',fuel:'Hybrid',trans:'CVT',seats:5,drive:'FWD',tag:'Sedan',carColor:'#eeeae4',carStroke:'#ccc',wColor:'#1a1a1a'},
+{id:'honda-acc',brand:'Honda',model:'Accord Sport 1.5T',year:'2023',price:'₦32,000,000',condition:'new',engine:'1.5L VTEC Turbo',power:'192hp',fuel:'Petrol',trans:'CVT',seats:5,drive:'FWD',tag:'Sedan',carColor:'#888',carStroke:'#666',wColor:'#222'},
+{id:'bmw-x5',brand:'BMW',model:'X5 xDrive40i',year:'2020',price:'₦68,000,000',condition:'used',engine:'3.0L TwinPower',power:'340hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'xDrive',tag:'SUV',carColor:'#e8e4e0',carStroke:'#ccc',wColor:'#1a1a1a',featured:true},
+{id:'lexus-es',brand:'Lexus',model:'ES 350 F Sport',year:'2022',price:'₦55,000,000',condition:'new',engine:'3.5L V6',power:'302hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Luxury Sedan',carColor:'#0a0a0a',carStroke:'#2a2a2a',wColor:'#888'}
+];
+function svgSide(c,s,w){return '<svg viewBox="0 0 300 130" style="width:100%;height:140px;background:#0d0d0d"><path d="M20 95 Q20 60 55 55 L95 35 Q120 25 160 25 L210 30 Q250 35 270 60 L280 95" fill="'+c+'" stroke="'+s+'" stroke-width="2"/><rect x="95" y="40" width="60" height="28" rx="4" fill="#cfe8ff" opacity="0.5"/><rect x="160" y="35" width="55" height="30" rx="4" fill="#cfe8ff" opacity="0.5"/><circle cx="75" cy="98" r="20" fill="'+w+'"/><circle cx="75" cy="98" r="9" fill="#ccc"/><circle cx="235" cy="98" r="20" fill="'+w+'"/><circle cx="235" cy="98" r="9" fill="#ccc"/><rect x="22" y="78" width="20" height="10" rx="3" fill="#ffe9a8"/><rect x="258" y="78" width="20" height="10" rx="3" fill="#ff5c4d"/></svg>';}
+function svgPickup(c,s,w){return '<svg viewBox="0 0 360 140" style="width:100%;height:140px;background:#0d0d0d"><path d="M15 100 Q15 65 45 60 L80 40 Q100 30 135 30 L165 35 Q185 40 195 60 L195 100" fill="'+c+'" stroke="'+s+'"/><rect x="80" y="42" width="50" height="26" rx="4" fill="#cfe8ff" opacity="0.5"/><rect x="195" y="60" width="145" height="40" fill="'+c+'" stroke="'+s+'"/><line x1="205" y1="50" x2="330" y2="50" stroke="#666" stroke-width="3"/><line x1="205" y1="55" x2="205" y2="60" stroke="#666" stroke-width="3"/><line x1="330" y1="55" x2="330" y2="60" stroke="#666" stroke-width="3"/><circle cx="70" cy="105" r="20" fill="'+w+'"/><circle cx="70" cy="105" r="9" fill="#ccc"/><circle cx="290" cy="105" r="20" fill="'+w+'"/><circle cx="290" cy="105" r="9" fill="#ccc"/><text x="245" y="92" font-size="11" fill="'+s+'" font-weight="700">HILUX</text></svg>';}
+function fBase(bc,sc){return '<rect x="35" y="55" width="220" height="80" rx="18" fill="'+bc+'" stroke="'+sc+'" stroke-width="2"/><rect x="58" y="30" width="174" height="32" rx="12" fill="'+bc+'" stroke="'+sc+'"/><rect x="72" y="35" width="146" height="11" rx="5" fill="#fff" opacity="0.06"/><rect x="35" y="120" width="220" height="12" rx="5" fill="'+sc+'" opacity="0.5"/><ellipse cx="58" cy="138" rx="20" ry="9" fill="#0a0a0a"/><ellipse cx="58" cy="138" rx="8" ry="4" fill="#777"/><ellipse cx="232" cy="138" rx="20" ry="9" fill="#0a0a0a"/><ellipse cx="232" cy="138" rx="8" ry="4" fill="#777"/>';}
+function fWrap(i){return '<svg viewBox="0 0 290 160" style="width:100%;height:150px;background:#0d0d0d">'+i+'</svg>';}
+function svgGlcFront(bc,sc){return fWrap(fBase(bc,sc)+'<rect x="118" y="62" width="54" height="40" rx="4" fill="#0a0a0a"/><line x1="122" y1="68" x2="168" y2="96" stroke="#666" stroke-width="2"/><line x1="122" y1="80" x2="168" y2="84" stroke="#666" stroke-width="2"/><line x1="122" y1="96" x2="168" y2="68" stroke="#666" stroke-width="2"/><circle cx="145" cy="82" r="13" fill="#ddd"/><line x1="145" y1="71" x2="145" y2="93" stroke="#222" stroke-width="2"/><line x1="135" y1="88" x2="155" y2="76" stroke="#222" stroke-width="2"/><line x1="135" y1="76" x2="155" y2="88" stroke="#222" stroke-width="2"/><rect x="60" y="70" width="34" height="9" rx="4" fill="#ffae42"/><rect x="196" y="70" width="34" height="9" rx="4" fill="#ffae42"/><rect x="60" y="82" width="34" height="14" rx="3" fill="#fffbe0"/><rect x="196" y="82" width="34" height="14" rx="3" fill="#fffbe0"/>');}
+function svgLcFront(bc,sc){return fWrap(fBase(bc,sc)+'<rect x="120" y="64" width="50" height="36" rx="3" fill="#0a0a0a"/><rect x="124" y="70" width="42" height="5" fill="#ccc"/><rect x="124" y="80" width="42" height="5" fill="#ccc"/><rect x="124" y="90" width="42" height="5" fill="#ccc"/><ellipse cx="145" cy="56" rx="10" ry="6" fill="none" stroke="#bbb" stroke-width="2"/><circle cx="70" cy="80" r="13" fill="#fffbe0" stroke="#999"/><circle cx="220" cy="80" r="13" fill="#fffbe0" stroke="#999"/><rect x="60" y="118" width="170" height="6" fill="#999"/>');}
+function svgLexIsFront(bc,sc){return fWrap(fBase(bc,sc)+'<path d="M118 64 L172 64 L166 84 L124 84 Z" fill="#0a0a0a"/><path d="M124 84 L166 84 L169 96 L121 96 Z" fill="#0a0a0a"/><rect x="100" y="62" width="14" height="9" rx="2" fill="#ccc"/><path d="M55 70 L82 76 L82 90 L55 86 Z" fill="#fffbe0" stroke="#999"/><path d="M235 70 L208 76 L208 90 L235 86 Z" fill="#fffbe0" stroke="#999"/><line x1="58" y1="80" x2="80" y2="80" stroke="#222" stroke-width="2"/><line x1="232" y1="80" x2="210" y2="80" stroke="#222" stroke-width="2"/>');}
+function svgMercEFront(bc,sc){return fWrap(fBase(bc,sc)+'<rect x="120" y="64" width="50" height="34" rx="3" fill="#0a0a0a"/><rect x="124" y="70" width="42" height="5" fill="#777"/><rect x="124" y="80" width="42" height="5" fill="#777"/><rect x="124" y="90" width="42" height="5" fill="#777"/><circle cx="145" cy="54" r="9" fill="#ddd"/><line x1="145" y1="47" x2="145" y2="61" stroke="#222" stroke-width="2"/><line x1="138" y1="58" x2="152" y2="50" stroke="#222" stroke-width="2"/><line x1="138" y1="50" x2="152" y2="58" stroke="#222" stroke-width="2"/><rect x="55" y="72" width="32" height="6" fill="#fffbe0"/><rect x="55" y="80" width="32" height="6" fill="#fffbe0"/><rect x="55" y="88" width="32" height="6" fill="#fffbe0"/><rect x="203" y="72" width="32" height="6" fill="#fffbe0"/><rect x="203" y="80" width="32" height="6" fill="#fffbe0"/><rect x="203" y="88" width="32" height="6" fill="#fffbe0"/>');}
+function svgS63Front(bc,sc){return fWrap(fBase(bc,sc)+'<rect x="112" y="62" width="66" height="38" rx="3" fill="#050505"/><line x1="118" y1="64" x2="118" y2="98" stroke="#888" stroke-width="2"/><line x1="125" y1="64" x2="125" y2="98" stroke="#888" stroke-width="2"/><line x1="132" y1="64" x2="132" y2="98" stroke="#888" stroke-width="2"/><line x1="139" y1="64" x2="139" y2="98" stroke="#888" stroke-width="2"/><line x1="146" y1="64" x2="146" y2="98" stroke="#888" stroke-width="2"/><line x1="153" y1="64" x2="153" y2="98" stroke="#888" stroke-width="2"/><line x1="160" y1="64" x2="160" y2="98" stroke="#888" stroke-width="2"/><line x1="167" y1="64" x2="167" y2="98" stroke="#888" stroke-width="2"/><line x1="174" y1="64" x2="174" y2="98" stroke="#888" stroke-width="2"/><circle cx="145" cy="80" r="14" fill="#ddd" stroke="#999"/><line x1="145" y1="68" x2="145" y2="92" stroke="#222" stroke-width="2"/><line x1="133" y1="89" x2="157" y2="71" stroke="#222" stroke-width="2"/><line x1="133" y1="71" x2="157" y2="89" stroke="#222" stroke-width="2"/><path d="M52 70 L86 74 L86 90 L52 92 Z" fill="#e8f0ff" stroke="#888"/><path d="M238 70 L204 74 L204 90 L238 92 Z" fill="#e8f0ff" stroke="#888"/><line x1="56" y1="78" x2="82" y2="80" stroke="#222"/><line x1="234" y1="78" x2="208" y2="80" stroke="#222"/><rect x="55" y="115" width="20" height="8" rx="2" fill="#222" stroke="#444"/><rect x="135" y="118" width="20" height="8" rx="2" fill="#222" stroke="#444"/><rect x="215" y="115" width="20" height="8" rx="2" fill="#222" stroke="#444"/><text x="145" y="110" text-anchor="middle" font-size="7" fill="#999" font-weight="700">V8 BITURBO</text><rect x="50" y="133" width="6" height="8" fill="#c02020"/><rect x="234" y="133" width="6" height="8" fill="#c02020"/>');}
+function svgCamryFront(bc,sc){return fWrap(fBase(bc,sc)+'<rect x="110" y="86" width="70" height="30" rx="3" fill="#0a0a0a"/><line x1="114" y1="90" x2="176" y2="112" stroke="#444" stroke-width="1.5"/><line x1="114" y1="100" x2="176" y2="92" stroke="#444" stroke-width="1.5"/><line x1="114" y1="112" x2="176" y2="100" stroke="#444" stroke-width="1.5"/><line x1="130" y1="86" x2="130" y2="116" stroke="#444" stroke-width="1.5"/><line x1="160" y1="86" x2="160" y2="116" stroke="#444" stroke-width="1.5"/><rect x="105" y="68" width="80" height="8" rx="3" fill="#cfcfcf"/><ellipse cx="145" cy="62" rx="13" ry="9" fill="none" stroke="#999" stroke-width="2"/><ellipse cx="145" cy="62" rx="7" ry="9" fill="none" stroke="#999" stroke-width="1.5"/><path d="M50 68 L88 72 L84 92 L50 88 Z" fill="#eef4ff" stroke="#bbb"/><path d="M240 68 L202 72 L206 92 L240 88 Z" fill="#eef4ff" stroke="#bbb"/><line x1="54" y1="76" x2="80" y2="78" stroke="#5a9bd6" stroke-width="2"/><line x1="236" y1="76" x2="210" y2="78" stroke="#5a9bd6" stroke-width="2"/><rect x="55" y="118" width="180" height="3" fill="#999"/>');}
+function carSvg(c){if(c.frontFn==='glc')return svgGlcFront(c.carColor,c.carStroke);if(c.frontFn==='lc')return svgLcFront(c.carColor,c.carStroke);if(c.frontFn==='lexis')return svgLexIsFront(c.carColor,c.carStroke);if(c.frontFn==='merce')return svgMercEFront(c.carColor,c.carStroke);if(c.frontFn==='s63')return svgS63Front(c.carColor,c.carStroke);if(c.frontFn==='camry')return svgCamryFront(c.carColor,c.carStroke);if(c.pickup)return svgPickup(c.carColor,c.carStroke,c.wColor);return svgSide(c.carColor,c.carStroke,c.wColor);}
+function showroomSVG(){
+var s='<svg viewBox="0 0 900 320" style="width:100%;height:300px">';
+s+='<rect x="0" y="0" width="900" height="320" fill="#0d0d0d"/>';
+for(var i=0;i<6;i++){var x=40+i*145;s+='<rect x="'+x+'" y="14" width="110" height="16" rx="3" fill="#fdf6e3" opacity="0.9"/>';}
+var cols=[80,320,560,800];
+for(var j=0;j<cols.length;j++){var cx=cols[j];s+='<rect x="'+cx+'" y="20" width="28" height="230" fill="#7a3b2e" stroke="#5e2c22"/>';for(var k=0;k<14;k++){s+='<line x1="'+cx+'" y1="'+(28+k*16)+'" x2="'+(cx+28)+'" y2="'+(28+k*16)+'" stroke="#5e2c22" stroke-width="1"/>';}s+='<rect x="'+(cx-4)+'" y="14" width="36" height="8" fill="#c9a84c"/>';}
+s+='<rect x="0" y="250" width="900" height="70" fill="#e9e9e9"/>';
+s+='<line x1="0" y1="320" x2="450" y2="255" stroke="#ccc" stroke-width="1.5"/><line x1="900" y1="320" x2="450" y2="255" stroke="#ccc" stroke-width="1.5"/><line x1="225" y1="320" x2="450" y2="255" stroke="#ccc"/><line x1="675" y1="320" x2="450" y2="255" stroke="#ccc"/>';
+s+='<line x1="0" y1="262" x2="900" y2="262" stroke="#d6d6d6"/><line x1="0" y1="278" x2="900" y2="278" stroke="#d6d6d6"/><line x1="0" y1="298" x2="900" y2="298" stroke="#d6d6d6"/>';
+function carIcon(x,y,sc,c){return '<g transform="translate('+x+','+y+') scale('+sc+')"><rect x="-43" y="-13" width="86" height="26" rx="8" fill="'+c+'"/><rect x="-29" y="-30" width="58" height="20" rx="6" fill="'+c+'"/><circle cx="-27" cy="13" r="9" fill="#111"/><circle cx="27" cy="13" r="9" fill="#111"/></g>';}
+var backRow=[[220,'#f0f0f0'],[450,'#111'],[680,'#1d5c2e']];
+for(var a=0;a<backRow.length;a++){s+=carIcon(backRow[a][0],265,0.68,backRow[a][1]);}
+var frontRow=[[150,'#c0c0c0'],[450,'#cc2200'],[750,'#2a4a8a']];
+for(var b=0;b<frontRow.length;b++){s+=carIcon(frontRow[b][0],312,1,frontRow[b][1]);}
+s+='<text x="450" y="60" text-anchor="middle" fill="#c9a84c" font-size="20" font-weight="700" font-family="Poppins">NEW HOPE AUTO LIMITED</text>';
+s+='<text x="450" y="310" text-anchor="middle" fill="#888" font-size="11">A Premium Showroom Experience &mdash; Lagos, Nigeria</text>';
+s+='</svg>';return s;}
+function cardHTML(c){var badge=c.condition==='new'?'Brand New':'Fairly Used';return '<div class="card"><div>'+carSvg(c)+'</div><div class="cb"><div style="display:flex;justify-content:space-between;align-items:start"><div><div style="font-size:13px;color:#888">'+c.brand+'</div><div style="font-weight:600;font-size:14px">'+c.model+'</div></div><span class="pill">'+c.tag+'</span></div><div style="font-size:11px;color:#888;margin:8px 0">'+c.year+' &middot; '+c.engine+' &middot; '+c.power+' &middot; '+c.trans+'</div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><span style="color:#c9a84c;font-weight:700;font-size:14px">'+c.price+'</span><span style="font-size:10px;color:#888">'+badge+'</span></div><span class="btn btn-o" style="margin-top:10px;display:block;text-align:center;font-size:11px;padding:8px" onclick="go(\'enquiries\')">Enquire</span></div></div>';}
+function renderFeatured(){var h='';for(var i=0;i<galleryData.length;i++){if(galleryData[i].featured)h+=cardHTML(galleryData[i]);}document.getElementById('featured-grid').innerHTML=h;}
+function renderArrivals(f,el){if(el){var t=el.parentNode.children;for(var i=0;i<t.length;i++)t[i].classList.remove('active');el.classList.add('active');}var h='';for(var i=0;i<galleryData.length;i++){var c=galleryData[i];if(f==='all'||c.condition===f)h+=cardHTML(c);}document.getElementById('arrivals-grid').innerHTML=h||'<p style="color:#888;font-size:13px">No vehicles in this category yet.</p>';}
+function renderGallery(f,el){if(el){var t=el.parentNode.children;for(var i=0;i<t.length;i++)t[i].classList.remove('active');el.classList.add('active');}var h='';for(var i=0;i<galleryData.length;i++){var c=galleryData[i];if(f==='All'||c.tag===f)h+=cardHTML(c);}document.getElementById('gallery-grid').innerHTML=h;}
+function go(p){var pgs=document.querySelectorAll('.nha .pg');for(var i=0;i<pgs.length;i++)pgs[i].classList.remove('active');var nbs=document.querySelectorAll('.nha .nb');for(var i=0;i<nbs.length;i++)nbs[i].classList.remove('active');document.getElementById('page-'+p).classList.add('active');var n=document.getElementById('nav-'+p);if(n)n.classList.add('active');window.scrollTo(0,0);}
+var steps=[{t:'Vehicle Selection',d:'Browse our Gallery or New Arrivals and pick the vehicle that fits your budget and needs. Save the model name to share with our sales team.'},{t:'Inspection Schedule',d:'Book a free inspection date. Our technicians give you a full mechanical and cosmetic report before you commit.'},{t:'Test Drive',d:'Take the vehicle for a supervised test drive around our facility or a nearby route of your choosing.'},{t:'Payment Process',d:'Choose full payment or a structured installment plan. We issue receipts and documentation for every transaction.'},{t:'Home Delivery',d:'Sit back &mdash; we deliver your new vehicle directly to your home or office, fully cleaned and fueled.'}];
+var cs=0;
+function renderStep(){var n='';for(var i=0;i<steps.length;i++){n+='<div style="text-align:center;flex:1"><div class="stepc'+(i===cs?' on':'')+'">'+(i+1)+'</div><div style="font-size:10px;color:#888">'+steps[i].t+'</div></div>';}document.getElementById('stepnav').innerHTML=n;document.getElementById('stepcontent').innerHTML='<h3 style="color:#c9a84c;font-size:15px">Step '+(cs+1)+': '+steps[cs].t+'</h3><p style="color:#bbb;font-size:13px;margin-top:8px;line-height:1.6">'+steps[cs].d+'</p>';}
+function moveStep(d){cs+=d;if(cs<0)cs=0;if(cs>steps.length-1)cs=steps.length-1;renderStep();}
+function eTab(name,el){var tabs=el.parentNode.children;for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('active');el.classList.add('active');var panes=document.querySelectorAll('.nha .eqp');for(var i=0;i<panes.length;i++)panes[i].classList.remove('active');document.getElementById('eq-'+name).classList.add('active');}
+function encodeForm(data){return Object.keys(data).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);}).join('&');}
+function handleSubmit(ev,msgId){ev.preventDefault();var form=ev.target;var fd=new FormData(form);var data={};fd.forEach(function(v,k){data[k]=v;});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:encodeForm(data)}).then(function(){document.getElementById(msgId).textContent='Thank you! Our team will reach out to you shortly.';form.reset();}).catch(function(){document.getElementById(msgId).textContent='Something went wrong sending this. Please call us directly or try again.';});return false;}
+function init(){renderFeatured();document.getElementById('showroom-host').innerHTML=showroomSVG();renderArrivals('all');renderGallery('All');renderStep();var sel=document.getElementById('enq-vehicle');var o='';for(var i=0;i<galleryData.length;i++)o+='<option>'+galleryData[i].brand+' '+galleryData[i].model+'</option>';sel.innerHTML=o;}
+init();
+</script>
+</body>
+</html>
