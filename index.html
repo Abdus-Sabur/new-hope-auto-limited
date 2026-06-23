@@ -59,34 +59,29 @@ html,body{margin:0;background:#0a0a0a}
 <h1 style="font-size:26px;color:#fff">Drive home <span style="color:#c9a84c">excellence</span>.</h1>
 <p style="color:#aaa;font-size:13px;max-width:520px;margin-bottom:16px">New and fairly-used vehicles, hand-inspected and sold with full transparency. From the showroom floor to your driveway.</p>
 <span class="btn btn-g" onclick="go('gallery')">Browse Gallery</span><span class="btn btn-o" onclick="go('buy')">Buy a Car</span>
-<h2 style="font-size:18px;margin-top:22px">Inside Our Showroom</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px">
-<img src="photos/showroom.jpg" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:8px">
-<img src="photos/aerial-lot.jpg" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:8px">
-<img src="photos/interior.jpg" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:8px">
-</div>
-<h2 style="font-size:18px;margin-top:28px">Featured Vehicles</h2>
-<div class="grid" id="featured-grid"></div>
+<img src="photos/showroom.jpg" loading="lazy" style="width:100%;height:380px;object-fit:cover;border-radius:10px;margin-top:20px;display:block">
 
-<div style="margin-top:36px;background:#111;border:1px solid #222;border-radius:10px;padding:22px;display:flex;gap:20px;flex-wrap:wrap">
-<div style="display:flex;flex-direction:column;align-items:center;gap:8px;min-width:110px">
-<div style="width:90px;height:90px;border-radius:50%;border:2px solid #c9a84c;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#c9a84c;font-family:Poppins">AAF</div>
-<svg viewBox="0 0 110 110" style="width:80px;height:80px">
+<div style="margin-top:16px;background:#111;border:1px solid #222;border-radius:10px;padding:14px;display:flex;gap:12px;flex-wrap:wrap;max-width:640px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:60px">
+<div style="width:48px;height:48px;border-radius:50%;border:2px solid #c9a84c;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#c9a84c;font-family:Poppins">AAF</div>
+<svg viewBox="0 0 110 110" style="width:44px;height:44px">
 <circle cx="55" cy="55" r="48" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
 <circle cx="55" cy="55" r="40" fill="none" stroke="#c9a84c" stroke-width="1"/>
 <polygon points="55,18 62,44 88,44 67,59 74,85 55,69 36,85 43,59 22,44 48,44" fill="none" stroke="#c9a84c" stroke-width="1.2"/>
-<text x="55" y="9" text-anchor="middle" fill="#c9a84c" font-size="6">NEW HOPE AUTO LIMITED</text>
-<text x="55" y="106" text-anchor="middle" fill="#c9a84c" font-size="5">INTEGRITY &middot; QUALITY &middot; EXCELLENCE</text>
 </svg>
 </div>
-<div style="flex:1;min-width:260px">
-<h2 style="font-size:17px;color:#fff">A Message from Our Chairman</h2>
-<p style="color:#bbb;font-size:13px;line-height:1.6;margin-bottom:10px">To every prospective customer walking through our doors or browsing this page &mdash; welcome. New Hope Auto Limited was built on one promise: that every Nigerian deserves a fair, transparent path to owning a quality vehicle. Every car on this floor has been personally vetted, and every transaction here is built on trust. We look forward to earning yours.</p>
-<p style="font-style:italic;color:#c9a84c;font-size:13px">&mdash; A.A. Fasasi, Chairman</p>
-<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
-<span class="pill">Transparent Transactions</span><span class="pill">Value for Money</span><span class="pill">Customer-First Priority</span>
+<div style="flex:1;min-width:200px">
+<h2 style="font-size:14px;color:#fff;margin:0 0 4px">A Message from Our Chairman</h2>
+<p style="color:#bbb;font-size:11px;line-height:1.5;margin-bottom:6px">To every prospective customer walking through our doors or browsing this page &mdash; welcome. New Hope Auto Limited was built on one promise: that every Nigerian deserves a fair, transparent path to owning a quality vehicle. Every car on this floor has been personally vetted, and every transaction here is built on trust. We look forward to earning yours.</p>
+<p style="font-style:italic;color:#c9a84c;font-size:11px;margin:0 0 6px">&mdash; A.A. Fasasi, Chairman</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap">
+<span class="pill" style="font-size:9px;padding:2px 7px">Transparent Transactions</span><span class="pill" style="font-size:9px;padding:2px 7px">Value for Money</span><span class="pill" style="font-size:9px;padding:2px 7px">Customer-First Priority</span>
 </div>
 </div></div>
+
+<h2 style="font-size:18px;margin-top:28px">Featured Vehicles</h2>
+<div class="grid" id="featured-grid"></div>
+<div style="text-align:center;margin-top:14px"><span class="btn btn-o" onclick="go('gallery')">View All Vehicles</span></div>
 </section>
 
 <section class="pg" id="page-arrivals">
@@ -97,6 +92,10 @@ html,body{margin:0;background:#0a0a0a}
 
 <section class="pg" id="page-gallery">
 <h2 style="font-size:20px">Vehicle Gallery</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:18px">
+<img src="photos/aerial-lot.jpg" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px">
+<img src="photos/interior.jpg" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px">
+</div>
 <div><span class="ftab active" onclick="renderGallery('All',this)">All</span><span class="ftab" onclick="renderGallery('SUV',this)">SUV</span><span class="ftab" onclick="renderGallery('Sedan',this)">Sedan</span><span class="ftab" onclick="renderGallery('Luxury Sedan',this)">Luxury Sedan</span><span class="ftab" onclick="renderGallery('Crossover',this)">Crossover</span><span class="ftab" onclick="renderGallery('Pickup',this)">Pickup</span></div>
 <div class="grid" id="gallery-grid"></div>
 </section>
@@ -201,7 +200,7 @@ s+='<text x="450" y="60" text-anchor="middle" fill="#c9a84c" font-size="20" font
 s+='<text x="450" y="310" text-anchor="middle" fill="#888" font-size="11">A Premium Showroom Experience &mdash; Lagos, Nigeria</text>';
 s+='</svg>';return s;}
 function cardHTML(c){var badge=c.condition==='new'?'Brand New':'Fairly Used';var media=c.photo?'<img src="'+c.photo+'" loading="lazy" style="width:100%;height:160px;object-fit:cover;display:block">':carSvg(c);return '<div class="card"><div>'+media+'</div><div class="cb"><div style="display:flex;justify-content:space-between;align-items:start"><div><div style="font-size:13px;color:#888">'+c.brand+'</div><div style="font-weight:600;font-size:14px">'+c.model+'</div></div><span class="pill">'+c.tag+'</span></div><div style="font-size:11px;color:#888;margin:8px 0">'+c.year+' &middot; '+c.engine+' &middot; '+c.power+' &middot; '+c.trans+'</div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><span style="color:#c9a84c;font-weight:700;font-size:14px">'+c.price+'</span><span style="font-size:10px;color:#888">'+badge+'</span></div><span class="btn btn-o" style="margin-top:10px;display:block;text-align:center;font-size:11px;padding:8px" onclick="go(\'enquiries\')">Enquire</span></div></div>';}
-function renderFeatured(){var h='';for(var i=0;i<galleryData.length;i++){if(galleryData[i].featured)h+=cardHTML(galleryData[i]);}document.getElementById('featured-grid').innerHTML=h;}
+function renderFeatured(){var h='';var n=0;for(var i=0;i<galleryData.length&&n<4;i++){if(galleryData[i].featured){h+=cardHTML(galleryData[i]);n++;}}document.getElementById('featured-grid').innerHTML=h;}
 function renderArrivals(f,el){if(el){var t=el.parentNode.children;for(var i=0;i<t.length;i++)t[i].classList.remove('active');el.classList.add('active');}var h='';for(var i=0;i<galleryData.length;i++){var c=galleryData[i];if(f==='all'||c.condition===f)h+=cardHTML(c);}document.getElementById('arrivals-grid').innerHTML=h||'<p style="color:#888;font-size:13px">No vehicles in this category yet.</p>';}
 function renderGallery(f,el){if(el){var t=el.parentNode.children;for(var i=0;i<t.length;i++)t[i].classList.remove('active');el.classList.add('active');}var h='';for(var i=0;i<galleryData.length;i++){var c=galleryData[i];if(f==='All'||c.tag===f)h+=cardHTML(c);}document.getElementById('gallery-grid').innerHTML=h;}
 function go(p){var pgs=document.querySelectorAll('.nha .pg');for(var i=0;i<pgs.length;i++)pgs[i].classList.remove('active');var nbs=document.querySelectorAll('.nha .nb');for(var i=0;i<nbs.length;i++)nbs[i].classList.remove('active');document.getElementById('page-'+p).classList.add('active');var n=document.getElementById('nav-'+p);if(n)n.classList.add('active');window.scrollTo(0,0);}
