@@ -14,29 +14,44 @@
 html,body{margin:0;background:#0a0a0a}
 .nha{font-family:Inter,Arial,sans-serif;background:#0a0a0a;color:#f0f0f0;max-width:1200px;margin:0 auto}
 .nha h1,.nha h2,.nha h3{font-family:Poppins,sans-serif;margin:0 0 10px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .nha .pg{display:none;padding:24px}
-.nha .pg.active{display:block}
+.nha .pg.active{display:block;animation:fadeUp .45s ease both}
 .nha header{position:sticky;top:0;background:#0a0a0a;z-index:10}
-.nha .nb{cursor:pointer;padding:8px 14px;border-radius:6px;font-size:13px;color:#888;font-weight:500}
+.nha .nb{cursor:pointer;padding:8px 14px;border-radius:6px;font-size:13px;color:#888;font-weight:500;transition:color .2s,background .2s}
 .nha .nb:hover,.nha .nb.active{color:#c9a84c;background:rgba(201,168,76,.08)}
-.nha .btn{display:inline-block;padding:11px 22px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #c9a84c;margin-right:8px}
+.nha .btn{display:inline-block;padding:11px 22px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #c9a84c;margin-right:8px;transition:transform .15s ease,background .2s,color .2s}
+.nha .btn:hover{transform:translateY(-2px)}
+.nha .btn:active{transform:scale(.96)}
 .nha .btn-g{background:#c9a84c;color:#0a0a0a}
 .nha .btn-o{background:transparent;color:#c9a84c}
-.nha .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
-.nha .card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;overflow:hidden}
-.nha .card:hover{border-color:#c9a84c}
+.nha .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px;transition:opacity .2s ease}
+.nha .card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .2s;opacity:0;transform:translateY(18px);animation:fadeUp .5s ease forwards}
+.nha .card:hover{border-color:#c9a84c;transform:translateY(-6px);box-shadow:0 12px 26px rgba(0,0,0,.45)}
+.nha .card img{transition:transform .4s ease}
+.nha .card:hover img{transform:scale(1.07)}
 .nha .cb{padding:14px}
-.nha .ftab{padding:7px 16px;border:1px solid #333;border-radius:20px;font-size:12px;cursor:pointer;color:#888;display:inline-block;margin:0 6px 6px 0}
+.nha .ftab{padding:7px 16px;border:1px solid #333;border-radius:20px;font-size:12px;cursor:pointer;color:#888;display:inline-block;margin:0 6px 6px 0;transition:background .2s,color .2s,border-color .2s}
 .nha .ftab.active{background:#c9a84c;color:#0a0a0a;border-color:#c9a84c}
+.nha .grid .card:nth-child(1){animation-delay:.03s}
+.nha .grid .card:nth-child(2){animation-delay:.08s}
+.nha .grid .card:nth-child(3){animation-delay:.13s}
+.nha .grid .card:nth-child(4){animation-delay:.18s}
+.nha .grid .card:nth-child(5){animation-delay:.23s}
+.nha .grid .card:nth-child(6){animation-delay:.28s}
+.nha .grid .card:nth-child(7){animation-delay:.33s}
+.nha .grid .card:nth-child(8){animation-delay:.38s}
+.nha .grid .card:nth-child(9){animation-delay:.43s}
+@keyframes pop{0%{transform:scale(.7)}60%{transform:scale(1.12)}100%{transform:scale(1)}}
 .nha input,.nha select,.nha textarea{width:100%;padding:10px;background:#111;border:1px solid #333;border-radius:6px;color:#f0f0f0;font-size:13px;margin-bottom:12px;font-family:Inter,sans-serif}
 .nha label{display:block;font-size:12px;color:#888;margin-bottom:5px}
-.nha .etab{padding:9px 16px;border-bottom:2px solid transparent;cursor:pointer;font-size:13px;color:#888;display:inline-block}
+.nha .etab{padding:9px 16px;border-bottom:2px solid transparent;cursor:pointer;font-size:13px;color:#888;display:inline-block;transition:color .2s,border-color .2s}
 .nha .etab.active{color:#c9a84c;border-color:#c9a84c}
 .nha .eqp{display:none}
-.nha .eqp.active{display:block}
+.nha .eqp.active{display:block;animation:fadeUp .4s ease both}
 .nha .stepnav{display:flex;justify-content:space-between;margin-bottom:20px}
-.nha .stepc{width:30px;height:30px;border-radius:50%;background:#1a1a1a;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:12px;color:#888;margin:0 auto 6px}
-.nha .stepc.on{background:#c9a84c;color:#0a0a0a;border-color:#c9a84c}
+.nha .stepc{width:30px;height:30px;border-radius:50%;background:#1a1a1a;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:12px;color:#888;margin:0 auto 6px;transition:background .25s,color .25s,border-color .25s}
+.nha .stepc.on{background:#c9a84c;color:#0a0a0a;border-color:#c9a84c;animation:pop .35s ease}
 .nha .pill{font-size:10px;padding:3px 9px;border-radius:10px;background:rgba(201,168,76,.15);color:#e8c76b;font-weight:600}
 .nha button.btn{font-family:inherit}
 .nha .hp{position:absolute;left:-9999px}
@@ -166,10 +181,6 @@ var galleryData=[
 {id:'toyota-cam',brand:'Toyota',model:'Camry SE 2.5L',year:'2020',price:'₦18,500,000',condition:'used',engine:'2.5L 4-Cyl',power:'203hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Sedan',carColor:'#cc2200',carStroke:'#991a00',wColor:'#1a1a1a',photo:'photos/toyota-cam.jpg'},
 {id:'toyota-camxse',brand:'Toyota',model:'Camry XSE 2.5L',year:'2022',price:'₦24,500,000',condition:'used',engine:'2.5L 4-Cyl',power:'203hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Sedan',carColor:'#f0ede8',carStroke:'#ccc',wColor:'#222',featured:true,frontFn:'camry',photo:'photos/toyota-camxse.jpg'},
 {id:'bestune-t77',brand:'Bestune',model:'T77 Pro 1.5T',year:'2024',price:'₦19,800,000',condition:'new',engine:'1.5L Turbo',power:'156hp',fuel:'Petrol',trans:'DCT 7-spd',seats:5,drive:'FWD',tag:'Crossover',carColor:'#f4f4f4',carStroke:'#ddd',wColor:'#222',featured:true,photo:'photos/bestune-t77.jpg'},
-{id:'toyota-hyb',brand:'Toyota',model:'Camry 2.5 Hybrid',year:'2023',price:'₦28,500,000',condition:'new',engine:'2.5L Hybrid',power:'218hp',fuel:'Hybrid',trans:'CVT',seats:5,drive:'FWD',tag:'Sedan',carColor:'#eeeae4',carStroke:'#ccc',wColor:'#1a1a1a'},
-{id:'honda-acc',brand:'Honda',model:'Accord Sport 1.5T',year:'2023',price:'₦32,000,000',condition:'new',engine:'1.5L VTEC Turbo',power:'192hp',fuel:'Petrol',trans:'CVT',seats:5,drive:'FWD',tag:'Sedan',carColor:'#888',carStroke:'#666',wColor:'#222'},
-{id:'bmw-x5',brand:'BMW',model:'X5 xDrive40i',year:'2020',price:'₦68,000,000',condition:'used',engine:'3.0L TwinPower',power:'340hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'xDrive',tag:'SUV',carColor:'#e8e4e0',carStroke:'#ccc',wColor:'#1a1a1a',featured:true},
-{id:'lexus-es',brand:'Lexus',model:'ES 350 F Sport',year:'2022',price:'₦55,000,000',condition:'new',engine:'3.5L V6',power:'302hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Luxury Sedan',carColor:'#0a0a0a',carStroke:'#2a2a2a',wColor:'#888'}
 ];
 function svgSide(c,s,w){return '<svg viewBox="0 0 300 130" style="width:100%;height:140px;background:#0d0d0d"><path d="M20 95 Q20 60 55 55 L95 35 Q120 25 160 25 L210 30 Q250 35 270 60 L280 95" fill="'+c+'" stroke="'+s+'" stroke-width="2"/><rect x="95" y="40" width="60" height="28" rx="4" fill="#cfe8ff" opacity="0.5"/><rect x="160" y="35" width="55" height="30" rx="4" fill="#cfe8ff" opacity="0.5"/><circle cx="75" cy="98" r="20" fill="'+w+'"/><circle cx="75" cy="98" r="9" fill="#ccc"/><circle cx="235" cy="98" r="20" fill="'+w+'"/><circle cx="235" cy="98" r="9" fill="#ccc"/><rect x="22" y="78" width="20" height="10" rx="3" fill="#ffe9a8"/><rect x="258" y="78" width="20" height="10" rx="3" fill="#ff5c4d"/></svg>';}
 function svgPickup(c,s,w){return '<svg viewBox="0 0 360 140" style="width:100%;height:140px;background:#0d0d0d"><path d="M15 100 Q15 65 45 60 L80 40 Q100 30 135 30 L165 35 Q185 40 195 60 L195 100" fill="'+c+'" stroke="'+s+'"/><rect x="80" y="42" width="50" height="26" rx="4" fill="#cfe8ff" opacity="0.5"/><rect x="195" y="60" width="145" height="40" fill="'+c+'" stroke="'+s+'"/><line x1="205" y1="50" x2="330" y2="50" stroke="#666" stroke-width="3"/><line x1="205" y1="55" x2="205" y2="60" stroke="#666" stroke-width="3"/><line x1="330" y1="55" x2="330" y2="60" stroke="#666" stroke-width="3"/><circle cx="70" cy="105" r="20" fill="'+w+'"/><circle cx="70" cy="105" r="9" fill="#ccc"/><circle cx="290" cy="105" r="20" fill="'+w+'"/><circle cx="290" cy="105" r="9" fill="#ccc"/><text x="245" y="92" font-size="11" fill="'+s+'" font-weight="700">HILUX</text></svg>';}
@@ -206,7 +217,7 @@ function renderGallery(f,el){if(el){var t=el.parentNode.children;for(var i=0;i<t
 function go(p){var pgs=document.querySelectorAll('.nha .pg');for(var i=0;i<pgs.length;i++)pgs[i].classList.remove('active');var nbs=document.querySelectorAll('.nha .nb');for(var i=0;i<nbs.length;i++)nbs[i].classList.remove('active');document.getElementById('page-'+p).classList.add('active');var n=document.getElementById('nav-'+p);if(n)n.classList.add('active');window.scrollTo(0,0);}
 var steps=[{t:'Vehicle Selection',d:'Browse our Gallery or New Arrivals and pick the vehicle that fits your budget and needs. Save the model name to share with our sales team.'},{t:'Inspection Schedule',d:'Book a free inspection date. Our technicians give you a full mechanical and cosmetic report before you commit.'},{t:'Test Drive',d:'Take the vehicle for a supervised test drive around our facility or a nearby route of your choosing.'},{t:'Payment Process',d:'Choose full payment or a structured installment plan. We issue receipts and documentation for every transaction.'},{t:'Home Delivery',d:'Sit back &mdash; we deliver your new vehicle directly to your home or office, fully cleaned and fueled.'}];
 var cs=0;
-function renderStep(){var n='';for(var i=0;i<steps.length;i++){n+='<div style="text-align:center;flex:1"><div class="stepc'+(i===cs?' on':'')+'">'+(i+1)+'</div><div style="font-size:10px;color:#888">'+steps[i].t+'</div></div>';}document.getElementById('stepnav').innerHTML=n;document.getElementById('stepcontent').innerHTML='<h3 style="color:#c9a84c;font-size:15px">Step '+(cs+1)+': '+steps[cs].t+'</h3><p style="color:#bbb;font-size:13px;margin-top:8px;line-height:1.6">'+steps[cs].d+'</p>';}
+function renderStep(){var n='';for(var i=0;i<steps.length;i++){n+='<div style="text-align:center;flex:1"><div class="stepc'+(i===cs?' on':'')+'">'+(i+1)+'</div><div style="font-size:10px;color:#888">'+steps[i].t+'</div></div>';}document.getElementById('stepnav').innerHTML=n;document.getElementById('stepcontent').innerHTML='<div style="animation:fadeUp .4s ease"><h3 style="color:#c9a84c;font-size:15px">Step '+(cs+1)+': '+steps[cs].t+'</h3><p style="color:#bbb;font-size:13px;margin-top:8px;line-height:1.6">'+steps[cs].d+'</p></div>';}
 function moveStep(d){cs+=d;if(cs<0)cs=0;if(cs>steps.length-1)cs=steps.length-1;renderStep();}
 function eTab(name,el){var tabs=el.parentNode.children;for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('active');el.classList.add('active');var panes=document.querySelectorAll('.nha .eqp');for(var i=0;i<panes.length;i++)panes[i].classList.remove('active');document.getElementById('eq-'+name).classList.add('active');}
 function encodeForm(data){return Object.keys(data).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);}).join('&');}
