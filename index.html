@@ -67,7 +67,8 @@ html,body{margin:0;background:#0a0a0a}
 <span class="nb" id="nav-gallery" onclick="go('gallery')">Gallery</span>
 <span class="nb" id="nav-buy" onclick="go('buy')">Buy a Car</span>
 <span class="nb" id="nav-enquiries" onclick="go('enquiries')">Enquiries &amp; Feedback</span>
-</nav></header>
+</nav>
+<a href="https://wa.me/2348033669271?text=Hello%20New%20Hope%20Auto%2C%20I%27m%20interested%20in%20one%20of%20your%20vehicles" target="_blank" rel="noopener" style="background:#25d366;color:#04130a;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">WhatsApp Us</a></header>
 
 <main>
 <section class="pg active" id="page-home">
@@ -124,6 +125,13 @@ html,body{margin:0;background:#0a0a0a}
 
 <section class="pg" id="page-enquiries">
 <h2 style="font-size:20px">Enquiries &amp; Feedback</h2>
+<div style="background:#111;border:1px solid #222;border-radius:10px;padding:14px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+<div style="font-size:12px;color:#bbb">Prefer to talk now? Reach us directly by phone or WhatsApp.</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<a href="tel:+2348033669271" class="btn btn-o" style="text-decoration:none">Call +234 803 366 9271</a>
+<a href="https://wa.me/2348033669271" target="_blank" rel="noopener" style="background:#25d366;color:#04130a;padding:11px 22px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none">WhatsApp Us</a>
+</div>
+</div>
 <div style="border-bottom:1px solid #222;margin-bottom:16px">
 <span class="etab active" onclick="eTab('enq',this)">Vehicle Enquiry</span><span class="etab" onclick="eTab('fb',this)">Feedback</span><span class="etab" onclick="eTab('visit',this)">Book a Visit</span>
 </div>
@@ -167,7 +175,9 @@ html,body{margin:0;background:#0a0a0a}
 </section>
 </main>
 
-<footer style="padding:20px 24px;border-top:1px solid #222;font-size:11px;color:#888;text-align:center">&copy; 2026 New Hope Auto Limited, Lagos, Nigeria. All rights reserved.</footer>
+<footer style="padding:20px 24px;border-top:1px solid #222;font-size:11px;color:#888;text-align:center">
+<div style="margin-bottom:8px;font-size:12px"><a href="tel:+2348033669271" style="color:#c9a84c;text-decoration:none">Call: +234 803 366 9271</a> &middot; <a href="https://wa.me/2348033669271" target="_blank" rel="noopener" style="color:#25d366;text-decoration:none">WhatsApp: +234 803 366 9271</a></div>
+&copy; 2026 New Hope Auto Limited, Lagos, Nigeria. All rights reserved.</footer>
 </div>
 
 <script>
@@ -181,6 +191,7 @@ var galleryData=[
 {id:'toyota-cam',brand:'Toyota',model:'Camry SE 2.5L',year:'2020',price:'₦18,500,000',condition:'used',engine:'2.5L 4-Cyl',power:'203hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Sedan',carColor:'#cc2200',carStroke:'#991a00',wColor:'#1a1a1a',photo:'photos/toyota-cam.jpg'},
 {id:'toyota-camxse',brand:'Toyota',model:'Camry XSE 2.5L',year:'2022',price:'₦24,500,000',condition:'used',engine:'2.5L 4-Cyl',power:'203hp',fuel:'Petrol',trans:'Auto 8-spd',seats:5,drive:'FWD',tag:'Sedan',carColor:'#f0ede8',carStroke:'#ccc',wColor:'#222',featured:true,frontFn:'camry',photo:'photos/toyota-camxse.jpg'},
 {id:'bestune-t77',brand:'Bestune',model:'T77 Pro 1.5T',year:'2024',price:'₦19,800,000',condition:'new',engine:'1.5L Turbo',power:'156hp',fuel:'Petrol',trans:'DCT 7-spd',seats:5,drive:'FWD',tag:'Crossover',carColor:'#f4f4f4',carStroke:'#ddd',wColor:'#222',featured:true,photo:'photos/bestune-t77.jpg'},
+{id:'honda-acc',brand:'Honda',model:'Accord Sport 2.4L',year:'2017',price:'₦10,500,000',condition:'used',engine:'2.4L 4-Cyl',power:'185hp',fuel:'Petrol',trans:'Automatic',seats:5,drive:'FWD',tag:'Sedan',carColor:'#5a1426',carStroke:'#3a0d18',wColor:'#1a1a1a',photo:'photos/honda-acc.jpg'},
 ];
 function svgSide(c,s,w){return '<svg viewBox="0 0 300 130" style="width:100%;height:140px;background:#0d0d0d"><path d="M20 95 Q20 60 55 55 L95 35 Q120 25 160 25 L210 30 Q250 35 270 60 L280 95" fill="'+c+'" stroke="'+s+'" stroke-width="2"/><rect x="95" y="40" width="60" height="28" rx="4" fill="#cfe8ff" opacity="0.5"/><rect x="160" y="35" width="55" height="30" rx="4" fill="#cfe8ff" opacity="0.5"/><circle cx="75" cy="98" r="20" fill="'+w+'"/><circle cx="75" cy="98" r="9" fill="#ccc"/><circle cx="235" cy="98" r="20" fill="'+w+'"/><circle cx="235" cy="98" r="9" fill="#ccc"/><rect x="22" y="78" width="20" height="10" rx="3" fill="#ffe9a8"/><rect x="258" y="78" width="20" height="10" rx="3" fill="#ff5c4d"/></svg>';}
 function svgPickup(c,s,w){return '<svg viewBox="0 0 360 140" style="width:100%;height:140px;background:#0d0d0d"><path d="M15 100 Q15 65 45 60 L80 40 Q100 30 135 30 L165 35 Q185 40 195 60 L195 100" fill="'+c+'" stroke="'+s+'"/><rect x="80" y="42" width="50" height="26" rx="4" fill="#cfe8ff" opacity="0.5"/><rect x="195" y="60" width="145" height="40" fill="'+c+'" stroke="'+s+'"/><line x1="205" y1="50" x2="330" y2="50" stroke="#666" stroke-width="3"/><line x1="205" y1="55" x2="205" y2="60" stroke="#666" stroke-width="3"/><line x1="330" y1="55" x2="330" y2="60" stroke="#666" stroke-width="3"/><circle cx="70" cy="105" r="20" fill="'+w+'"/><circle cx="70" cy="105" r="9" fill="#ccc"/><circle cx="290" cy="105" r="20" fill="'+w+'"/><circle cx="290" cy="105" r="9" fill="#ccc"/><text x="245" y="92" font-size="11" fill="'+s+'" font-weight="700">HILUX</text></svg>';}
@@ -221,7 +232,9 @@ function renderStep(){var n='';for(var i=0;i<steps.length;i++){n+='<div style="t
 function moveStep(d){cs+=d;if(cs<0)cs=0;if(cs>steps.length-1)cs=steps.length-1;renderStep();}
 function eTab(name,el){var tabs=el.parentNode.children;for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('active');el.classList.add('active');var panes=document.querySelectorAll('.nha .eqp');for(var i=0;i<panes.length;i++)panes[i].classList.remove('active');document.getElementById('eq-'+name).classList.add('active');}
 function encodeForm(data){return Object.keys(data).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);}).join('&');}
-function handleSubmit(ev,msgId){ev.preventDefault();var form=ev.target;var fd=new FormData(form);var data={};fd.forEach(function(v,k){data[k]=v;});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:encodeForm(data)}).then(function(){document.getElementById(msgId).textContent='Thank you! Our team will reach out to you shortly.';form.reset();}).catch(function(){document.getElementById(msgId).textContent='Something went wrong sending this. Please call us directly or try again.';});return false;}
+var WA_NUMBER='2348033669271';
+function waSummary(formName,data){var lines=['New '+formName+' from New Hope Auto website:'];Object.keys(data).forEach(function(k){if(k==='form-name'||k==='bot-field'||!data[k])return;lines.push(k+': '+data[k]);});return lines.join('\n');}
+function handleSubmit(ev,msgId){ev.preventDefault();var form=ev.target;var fd=new FormData(form);var data={};fd.forEach(function(v,k){data[k]=v;});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:encodeForm(data)}).then(function(){document.getElementById(msgId).innerHTML='Thank you! Our team will reach out to you shortly.<br><a href="https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(waSummary(form.getAttribute('name'),data))+'" target="_blank" rel="noopener" style="color:#25d366;font-weight:600">Tap here to also send this on WhatsApp &rarr;</a>';form.reset();}).catch(function(){document.getElementById(msgId).textContent='Something went wrong sending this. Please call us directly or try again.';});return false;}
 function init(){renderFeatured();renderArrivals('all');renderGallery('All');renderStep();var sel=document.getElementById('enq-vehicle');var o='';for(var i=0;i<galleryData.length;i++)o+='<option>'+galleryData[i].brand+' '+galleryData[i].model+'</option>';sel.innerHTML=o;}
 init();
 </script>
