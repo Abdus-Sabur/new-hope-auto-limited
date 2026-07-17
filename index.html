@@ -15,6 +15,8 @@ html,body{margin:0;background:#0a0a0a}
 .nha{font-family:Inter,Arial,sans-serif;background:#0a0a0a;color:#f0f0f0;max-width:1200px;margin:0 auto}
 .nha h1,.nha h2,.nha h3{font-family:Poppins,sans-serif;margin:0 0 10px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroSlide{from{transform:translateY(28px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes glowPulse{0%,100%{text-shadow:0 0 20px rgba(201,168,76,.3)}50%{text-shadow:0 0 40px rgba(201,168,76,.6)}}
 .nha .pg{display:none;padding:24px}
 .nha .pg.active{display:block;animation:fadeUp .45s ease both}
 .nha header{position:sticky;top:0;background:#0a0a0a;z-index:10}
@@ -72,10 +74,12 @@ html,body{margin:0;background:#0a0a0a}
 
 <main>
 <section class="pg active" id="page-home">
-<h1 style="font-size:26px;color:#fff">Drive home <span style="color:#c9a84c">excellence</span>.</h1>
-<p style="color:#aaa;font-size:13px;max-width:520px;margin-bottom:16px">New and fairly-used vehicles, hand-inspected and sold with full transparency. From the showroom floor to your driveway.</p>
+<h1 style="font-size:34px;line-height:1.15;letter-spacing:-0.4px;color:#fff;margin-bottom:12px;animation:heroSlide .8s cubic-bezier(.22,1,.36,1) .05s both">Drive home <span style="color:#c9a84c;animation:glowPulse 3s ease-in-out 1s infinite">excellence</span>.</h1>
+<p style="color:#bbb;font-size:14px;max-width:520px;margin-bottom:20px;line-height:1.7;animation:heroSlide .8s cubic-bezier(.22,1,.36,1) .22s both">New and fairly-used vehicles, hand-inspected and sold with full transparency. From the showroom floor to your driveway.</p>
+<div style="animation:heroSlide .8s cubic-bezier(.22,1,.36,1) .38s both;display:inline-block">
 <span class="btn btn-g" onclick="go('gallery')">Browse Gallery</span><span class="btn btn-o" onclick="go('buy')">Buy a Car</span>
-<img src="photos/showroom.jpg" loading="lazy" style="width:100%;height:380px;object-fit:cover;border-radius:10px;margin-top:20px;display:block">
+</div>
+<img src="photos/showroom.jpg" loading="lazy" style="width:100%;height:380px;object-fit:cover;border-radius:12px;margin-top:24px;display:block;box-shadow:0 16px 48px rgba(0,0,0,.6);animation:heroSlide 1.1s cubic-bezier(.22,1,.36,1) .15s both">
 
 <div style="margin-top:16px;background:#111;border:1px solid #222;border-radius:10px;padding:14px;display:flex;gap:12px;flex-wrap:wrap;max-width:640px">
 <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:60px">
